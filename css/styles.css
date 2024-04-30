@@ -1,0 +1,129 @@
+.body-container {
+    width: 100%;
+    background-color: #E0C097;
+    margin: 0;
+    padding: 0;
+
+
+
+}
+
+/* Card container styling */
+#header {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: black;
+
+
+}
+
+#header img {
+    margin-top: 20px;
+    height: 80px;
+}
+
+#buttons {
+
+    background-color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.equal-width {
+    min-width: 100px;
+    width: 33%;
+}
+
+
+.card {
+    box-shadow: 0 10px 15px 0 #0C0C0C;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9); */
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Ensures vertical alignment */
+    justify-content: space-between;
+    /* Aligns items across the card */
+    transition: transform 0.5s
+}
+
+
+/* Hover effect for card */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+
+}
+
+.card-content {
+
+    color: black;
+    font-size: larger;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.card-title {
+    padding-top: 15px;
+    height: 130px;
+    font-weight: bold;
+    color: black;
+    background-color: #B85C38;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.part {
+    background-color: grey;
+}
+
+/* Container for displaying cards with flexbox */
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows cards to wrap to new lines */
+    justify-content: space-around;
+    align-items: stretch;
+    /* Ensures equal heights */
+    padding: 10px;
+}
+
+/* Responsive media queries */
+
+/* For larger screens, maintain equal card widths */
+@media (min-width: 768px) {
+    .card {
+        width: 30%;
+        /* 3 cards per row */
+    }
+
+}
+
+/* For tablets and smaller laptops */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+        /* 2 cards per row */
+    }
+
+
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+        /* Almost full-width for one card per row */
+        margin: 10px auto;
+        /* Center-align the card */
+    }
+
+    .card-content {
+
+        font-weight: bold;
+    }
+}
